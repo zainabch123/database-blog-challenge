@@ -9,7 +9,7 @@ A profile should have, as a minimum, these fields:
 
 ## Instructions
 
-1. Add the minimum fields listed above.
+1. Create the Profile model and add the minimum fields listed above.
 2. Add any other fields you identified while completing the ERD.
 3. Add the appropriate relationship between Profile and User.
 4. Run `npx prisma generate` in your terminal to recompile the prisma client package.
