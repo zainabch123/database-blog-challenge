@@ -23,3 +23,10 @@ This challenge is an opportunity to practice everything we've learned about data
 ## Instructions
 - Work through each requirement in the `./requirements/` directory in numeric order
 - Add an image of your complete entity relationship diagram to the root directory of this repository
+
+## Extra Challenges
+
+Once you've completed every requirement, here are some additional challenges you should complete:
+
+1. Add a one-to-one self-relation to the Comment model to allow comments to have replies
+    - [Self-relations](https://www.prisma.io/docs/concepts/components/prisma-schema/relations/self-relations#one-to-one-self-relations)
