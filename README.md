@@ -25,7 +25,7 @@ This challenge is an opportunity to practice everything we've learned about data
 - Work through each requirement in the `./requirements/` directory in numeric order
 - Add an image of your complete entity relationship diagram to the root directory of this repository
 
-## Extra Challenges
+## Extension 1
 
 Once you've completed every requirement, here are some additional challenges you should complete:
 
