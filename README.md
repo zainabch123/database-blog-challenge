@@ -17,7 +17,7 @@ This challenge is an opportunity to practice everything we've learned about data
 1. Rename the `.env.example` file to `.env`. The [.gitignore](./.gitignore) file ensures that `.env` won't be tracked in the repository, keeping sensitive data safe.
 2. Create a new database instance in [ElephantSQL](https://www.elephantsql.com/).
 3. Edit the `DATABASE_URL` variable in `.env`, swapping `YOUR_DATABASE_URL` for the URL of the database you just created. Leave `?schema=prisma` at the end.
-4. Edit the `SHADOW_DATABASE_URL` variable in `.env`, swapping `YOUR_SHADOW_DATABASE_URL` for the URL of the shadow database you created in the previous exercise. Leave `?schema=shadow` at the end.
+4. Edit the `SHADOW_DATABASE_URL` variable in `.env`, swapping `YOUR_SHADOW_DATABASE_URL` for the URL of the **shadow database you created in the previous exercise**. Leave `?schema=shadow` at the end. (Note that if you create a new instance for your shadow database, you will need to create the `shadow` schema too.)
 6. Run `npm ci` to install the project dependencies.
 7. Run `npx prisma migrate reset` to execute the existing migration & data seed. Press `y` when it asks if you're sure.
 
