@@ -22,8 +22,24 @@ This challenge is an opportunity to practice everything we've learned about data
 7. Run `npx prisma migrate reset` to execute the existing migration & data seed. Press `y` when it asks if you're sure.
 
 ## Instructions
-- Work through each requirement in the `./requirements/` directory in numeric order
 - Add an image of your complete entity relationship diagram to the root directory of this repository
+- Work through each requirement in the `./requirements/` directory in numeric order
+- Ensure that your `seed.js` file creates the following data as a minimum:
+    - 3 users
+    - 3 profiles
+    - Each user has at least 2 posts (so you will have at least 6 posts in total)
+    - Each user has at least 1 post with 1 comment and at least 1 post with no comments (so you will have at least 3 comments in total)
+- In the project root directory, create a `src` folder, and in it:
+  - Create a `db.js` file where you create your Prisma client instance
+  - Create an `index.js` file where you will write some queries
+- In the `src/index.js` file, write the following queries:
+    - Get all rows of data from the users table
+    - Get all posts that belong to the user with ID 2
+    - Get the user with ID 1 and include their profile in the response
+    - Update the post with ID 1 so that its text/content is different from what was created in the seed file
+    - Delete the post with ID 3
+
+> Use the [Prisma docs](https://www.prisma.io/docs/orm/reference/prisma-client-reference) to help you.
 
 ## Extension 1
 
