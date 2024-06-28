@@ -15,9 +15,9 @@ This challenge is an opportunity to practice everything we've learned about data
 **Note: Although we do need a new primary database for this exercise, we can reuse the shadow database created in the earlier exercise across as many new projects as we like. This is because prisma always resets it back to a fresh state after using it.**
 
 1. Rename the `.env.example` file to `.env`. The [.gitignore](./.gitignore) file ensures that `.env` won't be tracked in the repository, keeping sensitive data safe.
-2. Create a new database instance in [ElephantSQL](https://www.elephantsql.com/).
+2. Create a new database instance in [Neon](https://neon.tech/), another cloud provider of your choice, or a local database.
 3. Edit the `DATABASE_URL` variable in `.env`, swapping `YOUR_DATABASE_URL` for the URL of the database you just created. Leave `?schema=prisma` at the end.
-4. Edit the `SHADOW_DATABASE_URL` variable in `.env`, swapping `YOUR_SHADOW_DATABASE_URL` for the URL of the **shadow database you created in the previous exercise**. Leave `?schema=shadow` at the end. (Note that if you create a new instance for your shadow database, you will need to create the `shadow` schema too.)
+4. IF USING NEON OR ANOTHER CLOUD PROVIDER: Edit the `SHADOW_DATABASE_URL` variable in `.env`, swapping `YOUR_SHADOW_DATABASE_URL` for the URL of the **shadow database you created in the previous exercise**. Leave `?schema=shadow` at the end. (Note that if you create a new instance for your shadow database, you will need to create the `shadow` schema too.)
 6. Run `npm ci` to install the project dependencies.
 7. Run `npx prisma migrate reset` to execute the existing migration & data seed. Press `y` when it asks if you're sure.
 
