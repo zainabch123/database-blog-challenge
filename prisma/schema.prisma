@@ -18,6 +18,7 @@ model User {
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
   profile     Profile?
+  posts       Post[]
 }
 
 model Profile {
@@ -26,6 +27,18 @@ model Profile {
   bio         String  @db.VarChar(120)
   user        User @relation(fields: [userId], references: [id])
   userId      Int @unique
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Post {
+  id          Int       @id @default(autoincrement())
+  title       String  @db.VarChar(150)
+  content     String  
+  isPublished Boolean @default(true)
+  pictureURL  String
+  user        User @relation(fields: [userId], references: [id])
+  userId      Int 
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }

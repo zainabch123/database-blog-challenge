@@ -37,6 +37,62 @@ async function seed() {
 
   console.log(`Profiles created:`, createdProfiles);
 
+  const createdPosts = await prisma.post.createManyAndReturn({
+    data: [
+      {
+        title: "Post 1",
+        content: "This is the content of post 1",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 1,
+      },
+      {
+        title: "Post 2",
+        content: "This is the content of post 2",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 2,
+      },
+      {
+        title: "Post 3",
+        content: "This is the content of post 3",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 3,
+      },
+      {
+        title: "Post 4",
+        content: "This is the content of post 4",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 1,
+      },
+      {
+        title: "Post 5",
+        content: "This is the content of post 5",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 2,
+      },
+      {
+        title: "Post 6",
+        content: "This is the content of post 6",
+        isPublished: true,
+        pictureURL:
+          "https://ids.si.edu/ids/deliveryService?id=NMAH-JN2018-00098-000001",
+        userId: 3,
+      },
+    ],
+  });
+
+  console.log(`Posts created:`, createdPosts);
+
+
   // Don't edit any of the code below this line
   process.exit(0);
 }
